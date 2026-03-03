@@ -238,6 +238,16 @@
             side.appendChild(el);
             animateMove(el, 6);
         }
+                function updateClock() {
+            if(!gameActive) return;
+            let elapsed = Math.floor((Date.now() - startTime) / 1000);
+            document.getElementById('time').innerText = elapsed;
+            
+            if(elapsed >= 15) {
+                gameActive = false;
+
+
+            }
 
 
         }
